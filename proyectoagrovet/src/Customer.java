@@ -1,28 +1,29 @@
-public class Customer extends Person  {
+    class Customer extends Person {
 
     private float totalPurchases;
-
     private Invoice purchaseHistory;
-
     private Pet[] pets;
 
+    public Customer() {
+    }
+    
     public boolean addPet() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return false;
     }
 
     public boolean removePet() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return false;
     }
 
     public Pet[] getPets() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return null;
     }
 
     public Invoice makePurchase() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return null;
     }
 
     public Invoice getPurchaseHistory() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return null;
     }
 }

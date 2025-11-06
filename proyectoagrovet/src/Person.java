@@ -1,20 +1,24 @@
 
 import java.util.Date;
 
-public abstract class Person  {
+public class Person  {
 
-    private String name;
+    protected String adress;
+    protected String email;
+    protected String id;
+    protected String name;
+    protected String phoneNumber;
+    protected Date registrationDate;
 
-    private String phoneNumber;
-
-    private String id;
-
-    private String email;
-
-    private String adress;
-
-    private Date registrationDate;
-
+    public Person(String adress, String email, String id, String name, String phoneNumber, Date registrationDate) {
+        this.adress = adress;
+        this.email = email;
+        this.id = id;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.registrationDate = registrationDate;
+    }
+    
     public String getRole() {
         throw new UnsupportedOperationException("Not supported yet.");
     }

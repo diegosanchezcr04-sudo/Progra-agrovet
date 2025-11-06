@@ -3,18 +3,13 @@ import java.util.Date;
 
 public class Employee extends Person  {
 
-    private Date hireDate;
-
-    private String workingStation;
-
-    private float salary;
-
-    private String departament;
-
-    private Status status;
-
-    private Schedule schedule;
-
+    protected  float salary;
+    protected Date hireDate;
+    protected  String workingStation;
+    protected  String departament;
+    protected  Status status;
+    protected  Schedule schedule;
+    
     public byte calculateSiniority() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
