@@ -10,7 +10,11 @@ public class Person  {
     protected String phoneNumber;
     protected Date registrationDate;
 
-    public Person(String adress, String email, String id, String name, String phoneNumber, Date registrationDate) {
+    public Person() {
+    }
+
+    public Person(String adress, String email, String id, String name, 
+            String phoneNumber, Date registrationDate) {
         this.adress = adress;
         this.email = email;
         this.id = id;

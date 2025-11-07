@@ -1,11 +1,23 @@
+
+import java.util.Date;
+
     class Customer extends Person {
 
     private float totalPurchases;
     private Invoice purchaseHistory;
     private Pet[] pets;
 
-    public Customer() {
+
+    public Customer(float totalPurchases, Invoice purchaseHistory, Pet[] pets, 
+            String adress, String email, String id, String name, String 
+                    phoneNumber, Date registrationDate) {
+        super(adress, email, id, name, phoneNumber, registrationDate);
+        this.totalPurchases = totalPurchases;
+        this.purchaseHistory = purchaseHistory;
+        this.pets = pets;
     }
+    
+    
     
     public boolean addPet() {
         return false;

@@ -11,7 +11,14 @@ public class Administrator extends Employee {
     private boolean systemModifier;
 
     public Administrator(Date startDay, Date finishDate, Status status, 
-            String accessLevel, String[] managedDepartments, boolean systemModifier) {
+            String accessLevel, String[] managedDepartments, boolean 
+                    systemModifier, float salary, Date hireDate, 
+                    String workingStation, String departament, Schedule schedule, 
+                    String adress, String email, String id, String name, String 
+                            phoneNumber, Date registrationDate) {
+        
+        super(salary, hireDate, workingStation, departament, status, schedule, 
+                adress, email, id, name, phoneNumber, registrationDate);
         this.startDay = startDay;
         this.finishDate = finishDate;
         this.status = status;
@@ -19,8 +26,7 @@ public class Administrator extends Employee {
         this.managedDepartments = managedDepartments;
         this.systemModifier = systemModifier;
     }
-    
-    
+
 
     public boolean addEmployee() {
         throw new UnsupportedOperationException("Not supported yet.");

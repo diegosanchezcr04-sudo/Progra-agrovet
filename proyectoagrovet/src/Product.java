@@ -8,7 +8,7 @@ public class Product {
     private float tax;
 
     private int barCode;
-    private int stockQuantity;
+    private short stockQuantity;
 
     private Date expirationDate;
 
@@ -23,7 +23,7 @@ public class Product {
     }
 
     public Product(float discount, float price, float tax, int barCode,
-            int stockQuantity, Date expirationDate, String description,
+            short stockQuantity, Date expirationDate, String description,
             String id, String name, Category category, Type type) {
 
         this.discount = discount;
@@ -59,7 +59,7 @@ public class Product {
                     Float.parseFloat(data[1]), // price  
                     Float.parseFloat(data[2]), // tax
                     Integer.parseInt(data[3]), // barCode
-                    Integer.parseInt(data[4]), // stockQuantity
+                    Short.parseShort(data[4]), // stockQuantity
                     new Date(Long.parseLong(data[5])), // expirationDate
                     data[6], // description
                     data[7], // id
