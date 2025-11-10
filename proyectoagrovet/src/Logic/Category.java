@@ -1,0 +1,13 @@
+package Logic;
+
+public enum Category {
+
+    VERINARY_MEDICINE, 
+    PET_FOOD,  
+    LIVESTOCK_FOOD,  
+    ANIMAL_ACCESSORIES,  
+    AGRO_SUPPLIES,  
+    ANIMAL_HYGIENE,  
+    FARM_EQUIPMENT, 
+    PETS 
+}

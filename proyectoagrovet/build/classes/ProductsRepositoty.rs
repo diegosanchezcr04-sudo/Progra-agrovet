@@ -1,2 +1,0 @@
-ProductsRepository
-ProductsManegementRepositoty
