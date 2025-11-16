@@ -1,9 +1,9 @@
 
 package Persistence;
 
-import Logic.Product;
-import Logic.Category;
-import Logic.Type;
+import logic.Product;
+import logic.Category;
+import logic.Type;
 
 import java.io.BufferedReader;
 import java.io.File;

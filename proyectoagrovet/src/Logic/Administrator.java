@@ -1,5 +1,8 @@
+package logic;
 
 import java.util.Date;
+import logic.Employee;
+import logic.Status;
 
 public class Administrator extends Employee {
 

@@ -1,3 +1,5 @@
+package logic;
+
 public class Pet {
 
     private String breed;

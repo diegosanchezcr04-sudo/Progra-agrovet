@@ -1,3 +1,10 @@
+package logic;
+
+import logic.Pet;
+import logic.Service;
+import logic.Status;
+import logic.Veterinarian;
+
 public class Appointment {
 
     private String date;

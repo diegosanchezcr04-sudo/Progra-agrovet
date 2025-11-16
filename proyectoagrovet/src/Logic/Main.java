@@ -1,4 +1,4 @@
-package Logic;
+package logic;
 
 import Persistence.ProductsRepository;
 import Persistence.Repository;

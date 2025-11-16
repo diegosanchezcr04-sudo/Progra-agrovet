@@ -1,3 +1,5 @@
+package logic;
+
 public class Service {
 
     private String name;
