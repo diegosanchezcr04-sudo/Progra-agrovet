@@ -12,10 +12,6 @@ public class Invoice {
 
     private Customer customer;
 
-    private Veterinarian veterinarian;
-
-    private Cashier cashier;
-
     private String[] listItems;
 
     private String animalTreated;

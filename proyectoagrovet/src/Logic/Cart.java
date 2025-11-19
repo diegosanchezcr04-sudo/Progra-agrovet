@@ -1,15 +1,12 @@
 package logic;
 
 import java.util.Date;
-import java.util.List;
 
 public class Cart {
 
     private String cartId;
 
     private Customer customer;
-
-    private List<InvoiceItem> Items;
 
     private Date createdDate;
 

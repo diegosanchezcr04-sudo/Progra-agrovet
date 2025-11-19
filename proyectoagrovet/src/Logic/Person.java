@@ -1,49 +1,71 @@
 package logic;
 
-import java.util.Date;
+/**
+ * Represents a person in the agrovet system and shares common attributes 
+ * and methods.
+ * Contains basic people information used by both customers and employees.
+ * 
+ * @author Leo Aguilar
+ */
+public abstract class Person {
 
-public class Person  {
-
-    protected String adress;
+    protected String address;
     protected String email;
     protected String id;
     protected String name;
-    protected String phoneNumber;
-    protected Date registrationDate;
+    protected String phone;
 
     public Person() {
     }
 
-    public Person(String adress, String email, String id, String name, 
-            String phoneNumber, Date registrationDate) {
-        this.adress = adress;
+    /**
+     * This constructor initialize the Person's atributes 
+     * @param address
+     * @param email
+     * @param id
+     * @param name
+     * @param phone 
+     */
+    public Person(String address, String email, String id, String name, 
+            String phone) {
+        this.address = address;
         this.email = email;
         this.id = id;
         this.name = name;
-        this.phoneNumber = phoneNumber;
-        this.registrationDate = registrationDate;
+        this.phone = phone;
+        
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPhone() {
+        return phone;
     }
     
-    public String getRole() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public float getDiscountRate() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public String generateReport() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public boolean validateData() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public void updateContactInfo() {
-    }
-
-    public String toString() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+    /**
+     * Gets people´s details asocied with the agrovet
+     * @return people´s details (customers, employees).
+     */
+    public abstract String getDetails();
+    
+    /**
+     * Turns the people´s data in file.txt format
+     * @return people´s data in file.txt format.
+     */
+    public abstract String toFileLine();
+    
 }
