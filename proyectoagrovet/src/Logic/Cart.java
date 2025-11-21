@@ -8,7 +8,7 @@ import java.util.Date;
  */
 public class Cart {
 
-    private final String id;
+    private final Stringlogic id;
     private final Date createdDate;
     private final CartItem[] items;
     private int itemCount;

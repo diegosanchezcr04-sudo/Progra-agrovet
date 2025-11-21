@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.table.*;
 import java.awt.*;
 import java.awt.event.*;
+import logic.Cart;
 
 /**
  * Invoice Management System for AgroVet POS
@@ -225,7 +226,7 @@ public class InvoiceManagement extends JFrame {
         navPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 0, 0));
 
         String[] menuItems = {
-            "📊 Dashboard", "📦 Inventory", "📈 Sales", "🧾 Invoices", "👥 Clients"
+            "📊 Cart", "📦 Employee", "📈 ", " Invoices", "👥 Costumer"
         };
 
         for (int i = 0; i < menuItems.length; i++) {
@@ -297,26 +298,20 @@ public class InvoiceManagement extends JFrame {
 button.addActionListener(e -> {
     System.out.println("Navigating to: " + text);
 
-    if (text.contains("Dashboard")) {
-        new Dashboard().setVisible(true);
+     if (text.contains("Cart")) {
+        new CartUI(new Cart(null)).setVisible(true);
+        this.dispose();
+        return;
+    }
+     
+    if (text.contains("Employee")) {
+        new EmployeeUI().setVisible(true);
         this.dispose();
         return;
     }
 
-    if (text.contains("Clients")) {
-        new Clients().setVisible(true);
-        this.dispose();
-        return;
-    }
-
-    if (text.contains("Inventory")) {
-        new Inventory().setVisible(true);
-        this.dispose();
-        return;
-    }
-
-    if (text.contains("Sales")) {
-        new Sales().setVisible(true);
+    if (text.contains("Customer")) {
+        new CustomerUI().setVisible(true);
         this.dispose();
         return;
     }
