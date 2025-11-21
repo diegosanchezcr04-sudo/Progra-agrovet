@@ -294,9 +294,36 @@ public class InvoiceManagement extends JFrame {
             }
         });
 
-        button.addActionListener(e -> {
-            System.out.println("Navigating to: " + text);
-        });
+button.addActionListener(e -> {
+    System.out.println("Navigating to: " + text);
+
+    if (text.contains("Dashboard")) {
+        new Dashboard().setVisible(true);
+        this.dispose();
+        return;
+    }
+
+    if (text.contains("Clients")) {
+        new Clients().setVisible(true);
+        this.dispose();
+        return;
+    }
+
+    if (text.contains("Inventory")) {
+        new Inventory().setVisible(true);
+        this.dispose();
+        return;
+    }
+
+    if (text.contains("Sales")) {
+        new Sales().setVisible(true);
+        this.dispose();
+        return;
+    }
+
+    System.out.println("No action for: " + text);
+});
+
 
         return button;
     }

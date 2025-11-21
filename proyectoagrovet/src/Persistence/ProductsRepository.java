@@ -1,9 +1,6 @@
-
 package Persistence;
 
 import logic.Product;
-import logic.Category;
-import logic.Type;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,8 +10,8 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.Date;
 
-
 /**
+ * Represent the repository when the products are stored
  *
  * @author leonardo
  */
@@ -23,6 +20,9 @@ public class ProductsRepository extends Repository {
     private final Product products[] = new Product[100];
     private byte counter;
 
+    /**
+     * Created the products´file
+     */
     @Override
     public void createFile() {
         File file = new File("products.txt");
@@ -42,6 +42,9 @@ public class ProductsRepository extends Repository {
 
     }
 
+    /**
+     * Add products in the file
+     */
     @Override
     public void addItem() {
 
@@ -82,7 +85,7 @@ public class ProductsRepository extends Repository {
 
                 Product product = new Product(discount, price, tax, barCode,
                         stockQuantity, new Date(), description, id, name,
-                        Category.PET_FOOD, Type.DOG_FOOD);
+                        Product.Category.PET_FOOD, Product.Type.DOG_FOOD);
 
                 if (counter < products.length) {
                     products[counter++] = product;
@@ -94,16 +97,19 @@ public class ProductsRepository extends Repository {
 
         } catch (IOException e) {
             System.out.println("Input error: " + e.getMessage());
-            
+
         } catch (NumberFormatException e) {
-        System.out.println("Invalid number format: " + e.getMessage());
-        
+            System.out.println("Invalid number format: " + e.getMessage());
+
         } catch (Exception e) {
-        System.out.println("Unexpected error: " + e.getMessage());
-    }
+            System.out.println("Unexpected error: " + e.getMessage());
+        }
 
     }
 
+    /**
+     * Load the productos in the file
+     */
     @Override
     public void loadItem() {
         try ( BufferedReader br = new BufferedReader(
@@ -126,6 +132,9 @@ public class ProductsRepository extends Repository {
 
     }
 
+    /**
+     * Save the products in the file
+     */
     @Override
     public void saveItem() {
         try ( PrintWriter pw = new PrintWriter("products.txt")) {
@@ -141,6 +150,9 @@ public class ProductsRepository extends Repository {
 
     }
 
+    /**
+     * Delete the products file
+     */
     @Override
     public void deleteFile() {
         File file = new File("products.txt");

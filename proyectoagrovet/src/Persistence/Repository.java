@@ -1,9 +1,9 @@
 package Persistence;
 
-
 /**
+ * Represent repository where the invoices are stored
  *
- * @author leonardo
+ * @author Leo Aguilar
  */
 public abstract class Repository {
 
@@ -24,8 +24,6 @@ public abstract class Repository {
      * This abtract method is overrited in difentes repositories, for load items
      *
      */
-    
-    
     public abstract void loadItem();
 
     /**

@@ -1,8 +1,8 @@
 package logic;
 
 /**
- * Represent to agrovet employees. Contains basic employee information and 
- * their system permissions.
+ * Represent to agrovet employees. Contains basic employee information and their
+ * system permissions.
  *
  * @author Leo Aguilar
  */
@@ -19,8 +19,9 @@ public class Employee extends Person {
     }
 
     /**
-     * Initialize the Employee atributies and validates the employee role 
-     * and password.
+     * Initialize the Employee atributies and validates the employee role and
+     * password.
+     *
      * @param active
      * @param role
      * @param password
@@ -33,14 +34,14 @@ public class Employee extends Person {
     public Employee(boolean active, EmployeeRole role, String password,
             String address, String email, String id, String name,
             String phone) {
-          super(address, email, id, name, phone);
-        
-    if (role == null) {
-        throw new IllegalArgumentException("Employee role cannot be null");
-    }
-    if (password == null || password.trim().isEmpty()) {
-        throw new IllegalArgumentException("Password cannot be empty");
-    }
+        super(address, email, id, name, phone);
+
+        if (role == null) {
+            throw new IllegalArgumentException("Employee role cannot be null");
+        }
+        if (password == null || password.trim().isEmpty()) {
+            throw new IllegalArgumentException("Password cannot be empty");
+        }
         this.active = active;
         this.role = role;
         this.password = password;
@@ -66,9 +67,10 @@ public class Employee extends Person {
         return "EMPLOYEE;" + id + ";" + name + ";" + email + ";"
                 + phone + ";" + address + ";" + role + ";" + active;
     }
-    
+
     /**
      * Authenticates employee with provided password
+     *
      * @param inputPassword
      * @return status active and password compared inputPassword
      */
@@ -90,24 +92,23 @@ public class Employee extends Person {
 
     /**
      * Allow set password if the current password is not empty
-     * @param newPassword 
+     *
+     * @param newPassword
      */
     public void setPassword(String newPassword) {
-         if (newPassword != null && !newPassword.trim().isEmpty()) {
+        if (newPassword != null && !newPassword.trim().isEmpty()) {
             this.password = newPassword;
         }
     }
-    
-    
-    
+
     /**
      * Represent the employee's role in the agrovet POS.
-     * 
+     *
      * @author Leo Aguilar
      */
     public enum EmployeeRole {
         Admin,
         Cashier,
-     
+
     }
 }
