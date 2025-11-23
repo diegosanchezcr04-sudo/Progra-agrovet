@@ -5,6 +5,7 @@ import javax.swing.table.*;
 import java.awt.*;
 import java.awt.event.*;
 import logic.Cart;
+import ui.CustomerUI;
 
 /**
  * Invoice Management System for AgroVet POS
@@ -226,7 +227,7 @@ public class InvoiceManagement extends JFrame {
         navPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 0, 0));
 
         String[] menuItems = {
-            "📊 Cart", "📦 Employee", "📈 ", " Invoices", "👥 Costumer"
+            "📊 Cart", "📦 Employee", "📈 ", " Invoices", "👥 Customer"
         };
 
         for (int i = 0; i < menuItems.length; i++) {
@@ -315,9 +316,24 @@ button.addActionListener(e -> {
         this.dispose();
         return;
     }
+    if (text.contains("Logout")) {
+    int confirm = JOptionPane.showConfirmDialog(
+            this,
+            "¿Deseas salir del sistema?",
+            "Salir",
+            JOptionPane.YES_NO_OPTION
+    );
+
+    if (confirm == JOptionPane.YES_OPTION) {
+        this.dispose();   // cierra solo la ventana actual
+        // System.exit(0);  // <- si quieres cerrar todo el programa
+    }
+    return;
+}
 
     System.out.println("No action for: " + text);
 });
+
 
 
         return button;
