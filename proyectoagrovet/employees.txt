@@ -1,0 +1,2 @@
+EMPLOYEE;34;Francis;francis@gmail;34567865;pavones;Cashier;true
+EMPLOYEE;34;Francis;francis@gmail;34567865;pavones;Cashier;true
